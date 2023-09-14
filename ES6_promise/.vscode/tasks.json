@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "check-lint",
+			"path": "ES6_promise",
+			"problemMatcher": [
+				"$eslint-compact"
+			],
+			"label": "npm: check-lint - ES6_promise",
+			"detail": "lint [0-9]*.js"
+		}
+	]
+}
