@@ -1,11 +1,16 @@
-
-
 export default function getListStudents() {
-    return [
-      { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
-      { id: 2, firstName: 'James', location: 'Columbia' },
-      { id: 5, firstName: 'Serena', location: 'San Francisco' },
-    ];
+    class Students {
+      constructor(id, firstName, location) {
+        this.id = id;
+        this.firstName = firstName;
+        this.location = location;
+      }
+    }
+  
+    // Convert class instances to plain objects using Object.assign
+    const student1 = { ...new Students(1, 'Guillaume', 'San Francisco') };
+    const student2 = { ...new Students(2, 'James', 'Columbia') };
+    const student3 = { ...new Students(5, 'Serena', 'San Francisco') };
+  
+    return [student1, student2, student3];
   }
-
-  console.log(getListStudents());
